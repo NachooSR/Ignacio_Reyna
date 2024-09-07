@@ -1,0 +1,51 @@
+.gallery-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.gallery {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    width: 60%;
+    gap: 30rem;
+}
+
+.proyecto img {
+    width: 100%;
+    filter: grayscale(100%);
+    transition: filter 0.5s;
+}
+
+.proyecto img:hover {
+    filter: grayscale(0);
+}
+
+#backBtn, #nextBtn {
+    width: 50px;
+    cursor: pointer;
+}
+
+.contenedor-Proyecto{
+    background-color: rgb(0, 0, 0,0.2);
+    
+    border-radius: 5px;
+}
+
+.contenedor-Proyecto img{
+    width: 80%;
+    opacity: 1;
+}
+
+.descripcion-Proyecto{
+    margin-top: 2rem;
+}
+
+.descripcionProyecto h2{
+    color:#8c52ff;
+}
+
+

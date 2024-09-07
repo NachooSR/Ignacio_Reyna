@@ -1,0 +1,91 @@
+#sobreMi{
+   color: #8c52ff;
+   margin-top: 4rem;
+}
+
+.contenedorInformacion{
+    display: flex;
+    gap: 2rem;
+    width: 60%;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: auto;
+}
+
+.descripcionPersonal{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    color: white;
+    flex: 1;
+    margin-bottom: 2rem;
+    
+}
+
+
+.tituloUniversitario{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+    flex:1;
+    color: grey;
+    margin-top: 5rem;
+    border: 1px solid #8c52ff;
+    background-color: #320a3d;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.tituloUniversitario:hover{
+    color: white;
+   
+}
+
+.formacion{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    width: 60%;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    
+}
+
+.formacion h2{
+    color: #8c52ff;
+}
+
+.formacion-cursos{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.detalleCurso{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap:0.3rem;
+    flex:1;
+    color: grey;
+    border: 1px solid #8c52ff;
+    background-color: #320a3d;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.detalleCurso:hover{
+    color: white;
+    svg{
+        fill: white;
+    }
+}
+
+.boton-Certificado svg{
+     fill: #8c52ff;
+}

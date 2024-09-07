@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(to right, #000000, #320a3d);
+    min-height: 100vh;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+
+/*-------------NAVBAR---------------*/
+nav{
+    
+    background: linear-gradient(to right, #000000, #640080);
+    box-shadow: 3px 5px 5px rgba(0,0,0,0.1);
+    padding: 5px;
+}
+
+  
+
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li{
+    height: 50px;
+}
+
+nav a{
+    height: 100%;
+    padding:0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items:center;
+    color: white;
+}
+
+nav a:hover{
+    background-color: #9605be;
+    transition: 0.2s;
+}
+
+nav  :first-child{
+    margin-right: auto;
+}
+
+
+.section-divider {
+    height: 4px; /* Grosor de la línea */
+    background-color: #9605be; /* Color base de la línea (neón verde en este caso) */
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff; /* Efecto de neón */
+    margin: 15px 0;
+  }
+  
