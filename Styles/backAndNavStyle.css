@@ -52,9 +52,9 @@ nav  :first-child{
 
 
 .section-divider {
-    height: 4px; /* Grosor de la línea */
-    background-color: #9605be; /* Color base de la línea (neón verde en este caso) */
-    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff; /* Efecto de neón */
+    height: 4px; 
+    background-color: #9605be; 
+    box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff; 
     margin: 15px 0;
   }
   

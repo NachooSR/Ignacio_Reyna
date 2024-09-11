@@ -1,0 +1,6 @@
+.contenedor-Skills{
+    display: flex;
+    width: 60%;
+    margin: auto;
+    gap: 2rem;
+}

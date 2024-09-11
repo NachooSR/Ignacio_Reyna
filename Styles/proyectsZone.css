@@ -1,3 +1,5 @@
+
+
 .gallery-wrap {
     display: flex;
     align-items: center;
@@ -11,18 +13,19 @@
     overflow: hidden;
     scroll-behavior: smooth;
     width: 60%;
-    gap: 30rem;
 }
+
+
 
 .proyecto img {
     width: 100%;
     filter: grayscale(100%);
     transition: filter 0.5s;
+    box-shadow: 0 0 10px #8c52ff, 0 0 10px #8c52ff, 0 0 30px #8c52ff, 0 0 40px #8c52ff; 
+    border-radius: 5px;
 }
 
-.proyecto img:hover {
-    filter: grayscale(0);
-}
+
 
 #backBtn, #nextBtn {
     width: 50px;
@@ -31,21 +34,66 @@
 
 .contenedor-Proyecto{
     background-color: rgb(0, 0, 0,0.2);
-    
-    border-radius: 5px;
+    border: 0.5px solid #8c52ff;
+    border-radius: 5px ;
+    display: flex;
+    padding: 2rem;
+    color: gray;
+    height: 20rem;
 }
 
 .contenedor-Proyecto img{
-    width: 80%;
-    opacity: 1;
+    width: 60%;
 }
 
-.descripcion-Proyecto{
-    margin-top: 2rem;
+.descripcionProyecto{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-left: 3rem;
+    
+}
+
+
+
+.contenedor-Proyecto:hover{
+    img{
+        filter: grayscale(0);
+    }
+    h2{
+        color: #8c52ff;
+    }
+    p{
+        color: white
+    };
+}
+
+.descripcionProyecto p{
+    padding: 5px;
+    border-radius: 3px;
+    transition: 0.5s;
 }
 
 .descripcionProyecto h2{
-    color:#8c52ff;
+    transition: 0.5s;
 }
 
+.boton-Repo{
+    display:flex;
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: center;
+    color: #8c52ff;
+    text-decoration: none;
+    gap: 1rem;
+    padding: 7px;
+    border: 1px solid #8c52ff;
+    border-radius: 3px;
+    transition: 0.7s;
+}
 
+.boton-Repo:hover{
+    transform: scale(1.1);
+    color: white;
+    background-color: #320a3d;
+}
