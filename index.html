@@ -5,29 +5,46 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./Styles/backAndNavStyle.css" />
   <link rel="stylesheet" href="./Styles/landingStyle.css" />
   <link rel="stylesheet" href="./Styles/aboutMeStyle.css" />
   <link rel="stylesheet" href="./Styles/proyectsZone.css">
   <link rel="stylesheet" href="./Styles/Skills-Zone.css">
+  <link rel="stylesheet" href="./Styles/footer.css">
 </head>
 
 
 
 <body>
 
-  
-  
+
+
   <header>
+
     <nav>
+      <ul class="sideBar">
+        <li onclick=hideSideBar()> <a href=""><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <li><a href="#sobreMi-zona">Sobre Mi</a></li>
+        <li><a href="#proyectos-zona">Proyectos</a></li>
+        <li><a href="#habilidades-zona">Habilidades</a></li>
+        <li><a href="#contacto-zona">Contacto</a></li>
+      </ul>
+
       <ul>
         <li><a href="#">Reyna Ignacio</a></li>
-        <li><a href="#sobreMi">Sobre Mi</a></li>
-        <li><a href="#">Proyectos</a></li>
-        <li><a href="#">Habilidades</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li class="hideOnMobile"><a href="#sobreMi-zona">Sobre Mi</a></li>
+        <li class="hideOnMobile"><a href="#proyectos-zona">Proyectos</a></li>
+        <li class="hideOnMobile"><a href="#habilidades-zona">Habilidades</a></li>
+        <li class="hideOnMobile"><a href="#contacto-zona">Contacto</a></li>
+        <li class="menuBoton" onclick=showSideBar() ><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
       </ul>
+
+      
     </nav>
+
   </header>
 
   <main>
@@ -50,7 +67,7 @@
 
 
 
-    <div class="contenedorInformacion">
+    <div class="contenedorInformacion" id="sobreMi-zona">
 
       <div class="descripcionPersonal">
         <h2 id="sobreMi">Sobre mi</h2>
@@ -83,20 +100,20 @@
                 d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
             </svg>
           </a>
-          
+
         </div>
 
         <div class="detalleCurso">
           <h3>Full-stack Java</h3>
           <p>Realizado en el programa de Codo a Codo, incluye curso de Habilidades blandas </p>
-          
-          <a href="/Documents/Certificacion Codo-Codo.pdf" class="boton-Certificado" download="" >
+
+          <a href="/Documents/Certificacion Codo-Codo.pdf" class="boton-Certificado" download="">
             <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
               <path
                 d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
             </svg>
           </a>
-          
+
         </div>
 
         <div class="detalleCurso">
@@ -119,79 +136,113 @@
 
 
 
-      <div class="formacion">
-        <h2>Proyectos</h2>
+    <div class="formacion" >
+      <h2 id="proyectos-zona">Proyectos</h2>
+    </div>
+
+    <div class="gallery-wrap" id="proyectos">
+      <img src="/Icons/arrow_back_ios_24dp_8C52FF_FILL0_wght400_GRAD0_opsz24.png" alt="" id="backBtn">
+
+      <div class="gallery">
+
+        <div class="proyecto" id="Java-Proyect">
+          <div class="contenedor-Proyecto">
+            <img src="/Images/Java-Academy.webp" alt="">
+            <div class="descripcionProyecto">
+              <h2>Java-Academy</h2>
+              <p>Proyecto facultativo con consigna libre realizado en grupo. El mismo es una representacion de la
+                facultad, con sus respectivas zonas y profesores. En este se pueden aprender conceptos basicos de Java
+              </p>
+              <a href="https://github.com/LadyCari/TpFinalLabIII" class="boton-Repo" target="_blank"><i
+                  class="fa-brands fa-github"></i> Repositorio</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="proyecto" id="Gym-Proyect">
+          <div class="contenedor-Proyecto">
+            <img src="/Images/Gym-Api.png" alt="">
+            <div class="descripcionProyecto">
+              <h2>Gym-Api</h2>
+              <p>Proyecto realizado para la facultad en grupo. Consta de consumir una Api de ejercicios y que el
+                usuario, una vez logueado, pueda seleccionar sus ejercicios favoritos, divididos por grupos musculares
+              </p>
+              <a href="https://github.com/bmSgithub/tplab4" class="boton-Repo" target="_blank"><i
+                  class="fa-brands fa-github"></i> Repositorio</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="proyecto" id="CaC-Proyect">
+          <div class="contenedor-Proyecto">
+            <img src="/Images/Codo-Codo.png" alt="">
+            <div class="descripcionProyecto">
+              <h2>Codo-Codo</h2>
+              <p>Proyecto final del programa. Consta de tres fases, la primera el Front-End, luego funcionalidades con
+                Js y por ultimo la integracion del Back con Java, esta ultima etapa de manera grupal.</p>
+              <a href="https://github.com/SantiR003/TpFinal-CaC" class="boton-Repo" target="_blank"><i
+                  class="fa-brands fa-github"></i> Repositorio</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="proyecto" id="Go-Proyect">
+          <div class="contenedor-Proyecto">
+            <img src="/Images/Api-Go.png" alt="">
+            <div class="descripcionProyecto">
+              <h2>Api Golang</h2>
+              <p>Creacion y consumicion de una Api externa. El proyecto cuenta con el uso de base de datos (PostgreSql),
+                Docker y como paso final el deploy en AWS</p>
+              <a href="https://github.com/NachooSR/labora-persona" class="boton-Repo" target="_blank"><i
+                  class="fa-brands fa-github"></i> Repositorio</a>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="gallery-wrap">
-        <img src="/Icons/arrow_back_ios_24dp_8C52FF_FILL0_wght400_GRAD0_opsz24.png" alt="" id="backBtn">
-      
-        <div class="gallery">
-            
-           <div class="proyecto" id="Java-Proyect">
-              <div class="contenedor-Proyecto">
-                <img src="/Images/Java-Academy.webp" alt="">
-                <div class="descripcionProyecto">
-                    <h2>Java-Academy</h2>
-                    <p>Proyecto facultativo con consigna libre realizado en grupo. El mismo es una representacion de la facultad, con sus respectivas zonas y profesores. En este se pueden aprender conceptos basicos de Java </p>
-                    <a href="https://github.com/LadyCari/TpFinalLabIII" class="boton-Repo" target="_blank"><i class="fa-brands fa-github"></i> Repositorio</a>
-                </div>
-              </div>
-            </div>
-    
-            <div class="proyecto" id="Gym-Proyect">
-              <div class="contenedor-Proyecto">
-                <img src="/Images/Gym-Api.png" alt="">
-                <div class="descripcionProyecto">
-                    <h2>Gym-Api</h2>
-                    <p>Proyecto realizado para la facultad en grupo. Consta de consumir una Api de ejercicios y que el usuario, una vez logueado, pueda seleccionar sus ejercicios favoritos, divididos por grupos musculares</p>
-                    <a href="https://github.com/bmSgithub/tplab4" class="boton-Repo"  target="_blank"><i class="fa-brands fa-github"></i> Repositorio</a>
-                </div>
-              </div>
-            </div>
-    
-            <div class="proyecto" id="CaC-Proyect">
-              <div class="contenedor-Proyecto">
-                <img src="/Images/Codo-Codo.png" alt="">
-                <div class="descripcionProyecto">
-                    <h2>Codo-Codo</h2>
-                    <p>Proyecto final del programa. Consta de tres fases, la primera el Front-End, luego funcionalidades con Js y por ultimo la integracion del Back con Java, esta ultima etapa de manera grupal.</p>
-                    <a href="https://github.com/SantiR003/TpFinal-CaC" class="boton-Repo"  target="_blank"><i class="fa-brands fa-github"></i> Repositorio</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="proyecto" id="Go-Proyect">
-              <div class="contenedor-Proyecto">
-                <img src="/Images/Api-Go.png" alt="">
-                <div class="descripcionProyecto">
-                    <h2>Api Golang</h2>
-                    <p>Creacion y consumicion de una Api externa. El proyecto cuenta con el uso de base de datos (PostgreSql), Docker y como paso final el deploy en AWS</p>
-                    <a href="https://github.com/NachooSR/labora-persona" class="boton-Repo"  target="_blank"><i class="fa-brands fa-github"></i> Repositorio</a>
-                </div>
-              </div>
-            </div>
-        </div>
-    
-        <img src="/Icons/arrow_forward_ios_24dp_8C52FF_FILL0_wght400_GRAD0_opsz24.png" alt="" id="nextBtn">
+      <img src="/Icons/arrow_forward_ios_24dp_8C52FF_FILL0_wght400_GRAD0_opsz24.png" alt="" id="nextBtn">
     </div>
 
-  
+
     <div class="formacion">
-      <h2>Skills</h2>
+      <h2>Habilidades</h2>
     </div>
 
-    <!-- <div class="contenedor-Skills">
-      <div class="boton-Cv">Golang</div>
-      <div class="boton-Cv">Java</div>
-      <div class="boton-Cv">C</div>
-      <div class="boton-Cv">Docker</div>
-      <div class="boton-Cv">Angular</div>
-      <div class="boton-Cv"></div>
-    </div> -->
+    
+    <div class="habilidadesConteiner" id="habilidades-zona">
+      <h2 class="skills-title" id="skills-title">Hard Skills </h2>
+      
+      <div class="skills-conteiner" id="skills-conteiner">
+          <div class="skill">Java</div>
+          <div class="skill">Golang</div>
+          <div class="skill">JavaScript</div>
+          <div class="skill">PostgreSQL</div>
+          <div class="skill">C</div>
+          <div class="skill">TypeScript</div>
+          <div class="skill">Docker</div>
+          <div class="skill">Angular</div>
+      </div>
+  </div>
+  
 
 
-    <footer></footer>
+
+    <footer>
+      <div class="footercito" id="contacto-zona">
+       
+        Developed By Ignacio Reyna
+        <div class="iconsContact">
+        <a href="https://www.linkedin.com/in/ignacio-nicolas-reyna-349834248/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/NachooSR" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.instagram.com/nacho_reynaa/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" onclick= "copiarPortapapeles('nachosilvareyna@gmail.com')" >
+          <i class="fa-regular fa-envelope" id="checkmark"></i>
+          
+        </a>
+      </div>
+    </div>
+
+    </footer>
 
     <script src="/Logic/logic.js"></script>
     <script src="https://kit.fontawesome.com/01888e8643.js" crossorigin="anonymous"></script>

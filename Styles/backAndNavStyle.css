@@ -6,16 +6,21 @@
 body{
     background: linear-gradient(to right, #000000, #320a3d);
     min-height: 100vh;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    font-family: "Roboto", sans-serif;
+
 }
 
 
 /*-------------NAVBAR---------------*/
 nav{
     
-    background: linear-gradient(to right, #000000, #640080);
+    background: linear-gradient(to left, #000000, #640080);
     box-shadow: 3px 5px 5px rgba(0,0,0,0.1);
     padding: 5px;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    
 }
 
   
@@ -58,3 +63,56 @@ nav  :first-child{
     margin: 15px 0;
   }
   
+
+
+  /***************SIDE BAR**************/
+
+.sideBar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 9999;
+  background-color: #8c52ff41;
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+}
+
+.sideBar li{
+    width: 100%;
+
+}
+
+.sideBar a{
+    width: 100%;
+}
+
+
+
+.menuBoton:hover{
+    cursor: pointer;
+}
+
+@media (max-width: 800px){
+    .hideOnMobile{
+        display:none
+    }
+
+    .menuBoton{
+        display: block;
+    }
+}
+
+@media (max-width: 400px){
+    .sideBar{
+        width: 100%;
+      
+    }
+}
+

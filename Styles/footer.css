@@ -1,0 +1,28 @@
+.footercito{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 1rem;
+   padding-top: 2rem; 
+   padding: 1rem;
+    align-items: center;
+    background: linear-gradient(to right, #000000, #640080);}
+
+
+
+.iconsContact{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.iconsContact i{
+    font-size: 2rem;
+    transition: 0.3s ease;
+}
+
+.iconsContact i:hover{
+    transform: scale(1.1);
+    color: white;
+}
+

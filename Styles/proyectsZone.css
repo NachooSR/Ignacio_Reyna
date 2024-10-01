@@ -97,3 +97,66 @@
     color: white;
     background-color: #320a3d;
 }
+
+@media (max-width: 768px) {
+    .gallery {
+        width: 80%; /* El carrusel ocupará un mayor porcentaje del ancho */
+    }
+
+    .contenedor-Proyecto {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .contenedor-Proyecto img {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .descripcionProyecto {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+/* Media queries para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+    .gallery {
+        width: 100%; /* El carrusel ocupará todo el ancho en móviles */
+    }
+
+    #backBtn, #nextBtn {
+        width: 30px;
+    }
+
+    .contenedor-Proyecto {
+        padding: 1rem;
+    }
+
+    .contenedor-Proyecto img {
+        width: 100%;
+    }
+
+    .descripcionProyecto {
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .boton-Repo {
+        padding: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .boton-Repo {
+        font-size: 14px; /* Ajusta el tamaño del texto */
+        padding: 5px 10px; /* Reduce el relleno del botón */
+        display: block; /* Para que ocupe todo el ancho si es necesario */
+        margin: 0 auto; /* Centra el botón */
+    }
+
+    .descripcionProyecto {
+        padding: 0 1rem; /* Añade algo de espacio a los lados para evitar que el texto y el botón se junten demasiado */
+    }
+}
