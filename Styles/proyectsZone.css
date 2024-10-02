@@ -98,9 +98,9 @@
     background-color: #320a3d;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .gallery {
-        width: 80%; /* El carrusel ocupará un mayor porcentaje del ancho */
+        width: 70%;
     }
 
     .contenedor-Proyecto {
@@ -116,14 +116,14 @@
 
     .descripcionProyecto {
         margin-left: 0;
-        text-align: center;
+       
     }
+   
 }
 
-/* Media queries para pantallas muy pequeñas (móviles) */
 @media (max-width: 480px) {
     .gallery {
-        width: 100%; /* El carrusel ocupará todo el ancho en móviles */
+        width: 100%; 
     }
 
     #backBtn, #nextBtn {
@@ -150,13 +150,13 @@
 
 @media (max-width: 768px) {
     .boton-Repo {
-        font-size: 14px; /* Ajusta el tamaño del texto */
-        padding: 5px 10px; /* Reduce el relleno del botón */
-        display: block; /* Para que ocupe todo el ancho si es necesario */
-        margin: 0 auto; /* Centra el botón */
+        font-size: 14px; 
+        padding: 5px 10px;
+        display: block; 
+        margin: 0 auto; 
     }
 
     .descripcionProyecto {
-        padding: 0 1rem; /* Añade algo de espacio a los lados para evitar que el texto y el botón se junten demasiado */
+        padding: 0 1rem; 
     }
 }

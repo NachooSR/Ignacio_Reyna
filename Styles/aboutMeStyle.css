@@ -89,3 +89,31 @@
 .boton-Certificado svg{
      fill: #8c52ff;
 }
+
+/*******MEDIA QUERIES******/
+
+@media (max-width: 1000px) {
+    .contenedorInformacion {
+      flex-direction: column; 
+      align-items: center; 
+    }
+  
+    .descripcionPersonal, .tituloUniversitario {
+      width: 100%; 
+    }
+    .tituloUniversitario{
+        margin-top: 0;
+    }
+    
+}
+
+@media (max-width: 900px) {
+    .formacion-cursos {
+      flex-direction: column; 
+       align-items: center; 
+    }
+  
+    .detalleCurso {
+      width: 100%; 
+    }
+  }

@@ -93,7 +93,9 @@ nav  :first-child{
     width: 100%;
 }
 
-
+.menuBoton{
+    display: none;
+}
 
 .menuBoton:hover{
     cursor: pointer;
