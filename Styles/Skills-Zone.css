@@ -1,25 +1,26 @@
-
-
-.skills-conteiner{
+.skills-conteiner {
   display: grid;
   margin-top: 2rem;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   color: white;
-  width: 40%;
+  width: 100%; 
+  max-width: 40%; /* Limitar el ancho máximo */
   margin: auto;
-  margin-bottom: 2rem;
-
+  margin-bottom: 3rem;
+  box-sizing: border-box; 
+  background-color: rgba(0, 0,0,0.3);
 }
 
-.skill{
+@media (max-width: 768px) { 
+  .skills-conteiner {
+    max-width: 90%; 
+  }
+}
+
+.skill {
   border: 1px solid #8c52ff;
   padding: 7px;
   border-radius: 5px;
   text-align: center;
 }
-
-.habilidadesConteiner h2{
-    margin-bottom: 1rem;
-}
-
