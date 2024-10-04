@@ -11,7 +11,12 @@ body{
 }
 
 
+
+
 /*-------------NAVBAR---------------*/
+
+
+
 nav{
     
     background: linear-gradient(to left, #000000, #640080);
@@ -23,7 +28,7 @@ nav{
     
 }
 
-  
+
 
 nav ul{
     width: 100%;
@@ -36,6 +41,8 @@ nav ul{
 nav li{
     height: 50px;
 }
+
+
 
 nav a{
     height: 100%;
@@ -64,6 +71,7 @@ nav  :first-child{
   }
   
 
+ 
 
   /***************SIDE BAR**************/
 
@@ -101,6 +109,7 @@ nav  :first-child{
     cursor: pointer;
 }
 
+
 @media (max-width: 800px){
     .hideOnMobile{
         display:none
@@ -117,4 +126,3 @@ nav  :first-child{
       
     }
 }
-

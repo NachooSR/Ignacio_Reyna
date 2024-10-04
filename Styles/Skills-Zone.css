@@ -5,11 +5,11 @@
   gap: 1rem;
   color: white;
   width: 100%; 
-  max-width: 40%; /* Limitar el ancho máximo */
+  max-width: 40%; 
   margin: auto;
   margin-bottom: 3rem;
   box-sizing: border-box; 
-  background-color: rgba(0, 0,0,0.3);
+  
 }
 
 @media (max-width: 768px) { 

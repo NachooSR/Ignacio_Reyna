@@ -14,6 +14,11 @@ function hideSideBar(){
     sideBar.style.display='none'
 }
 
+function hideSideBarAndRedirect(){
+    
+    const sideBar= document.querySelector('.sideBar')
+    sideBar.style.display='none'
+}
 
 
 
