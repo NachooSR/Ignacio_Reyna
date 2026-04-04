@@ -76,3 +76,37 @@
 .project-card:hover img {
   transform: scale(1.05);
 }
+
+.project-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  gap: 0.8rem;
+}
+
+.tech {
+  color: #888;
+}
+
+.repo-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid #00b7ff;
+  border-radius: 0.5rem;
+  color: #00b7ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.repo-btn i {
+  font-size: 0.9rem;
+}
+
+.repo-btn:hover {
+  background: #00b7ff;
+  color: #0f172a;
+}

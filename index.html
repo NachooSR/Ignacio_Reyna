@@ -24,6 +24,10 @@
     <link rel="stylesheet" href="./Styles/Skills-Zone.css" />
     <link rel="stylesheet" href="./Styles/footer.css" />
     <link rel="stylesheet" href="./Styles/contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
 
   <body>
@@ -109,7 +113,7 @@
     <div class="section-divider" id="about-me"></div>
 
     <div class="about-section">
-      <div class="about-text" >
+      <div class="about-text">
         <h2>Sobre <span>mí</span></h2>
         <p>
           Técnico en Programación enfocado en backend, con experiencia en
@@ -288,7 +292,7 @@
       <div class="coffee-card">
         <span class="close-modal" id="closeModal">&times;</span>
 
-        <h3 class="coffee-title">My barist life ☕</h3>
+        <h3 class="coffee-title">My life as a barista☕</h3>
 
         <p class="coffee-description">
           Mientras me formo como desarrollador, trabajo en un café hace más de 4
@@ -323,12 +327,16 @@
           <img src="./Images/django-project.png" />
 
           <div class="project-info">
-            <h3>Flowly</h3>
+            <h3>Flowly (En desarrollo)</h3>
             <p>App de finanzas personales en evolución.</p>
 
             <div class="project-footer">
-              <span>Python · Django · PostgreSQL</span>
-              <a href="#">GitHub</a>
+              <span class="tech">Python · Django</span>
+
+              <a href="https://github.com/NachooSR/Flowly-app" target="_blank" class="repo-btn">
+                <i class="fab fa-github"></i>
+                Repositorio
+              </a>
             </div>
           </div>
         </div>
@@ -341,8 +349,12 @@
             <p>Gestión de rutinas con API de ejercicios.</p>
 
             <div class="project-footer">
-              <span>Go · REST API</span>
-              <a href="#">GitHub</a>
+              <span class="tech">Angular · Typescript</span>
+
+              <a href="https://github.com/bmSgithub/tplab4" target="_blank" class="repo-btn">
+                <i class="fab fa-github"></i>
+                Repositorio
+              </a>
             </div>
           </div>
         </div>
@@ -355,8 +367,12 @@
             <p>Simulación de facultad para aprender Java.</p>
 
             <div class="project-footer">
-              <span>Java · OOP</span>
-              <a href="#">GitHub</a>
+              <span class="tech">Java · OOP</span>
+
+              <a href="https://github.com/LadyCari/TpFinalLabIII" target="_blank" class="repo-btn">
+                <i class="fab fa-github"></i>
+                Repositorio
+              </a>
             </div>
           </div>
         </div>
@@ -370,9 +386,15 @@
 
           <div class="contact-item">
             <div class="icon">📧</div>
-            <div>
-              <h4>Mail</h4>
-              <p>nachosilvareyna@gmail.com</p>
+            <div class="mail-row">
+              <div>
+                <h4>Mail</h4>
+                <p id="emailText">nachosilvareyna@gmail.com</p>
+              </div>
+
+              <button class="copy-btn" id="copyEmail">
+                <i class="fas fa-copy"></i>
+              </button>
             </div>
           </div>
 
@@ -385,9 +407,20 @@
           </div>
 
           <div class="socials">
-            <a href="#">GitHub</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Telegram</a>
+            <a href="https://github.com/NachooSR" target="_blank" class="social-link">
+              <i class="fab fa-github"></i>
+              GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/ignacio-nicolas-reyna-349834248/" target="_blank" class="social-link">
+              <i class="fab fa-linkedin"></i>
+              LinkedIn
+            </a>
+
+            <a href="https://wa.me/5492236638642" target="_blank" class="social-link">
+              <i class="fab fa-whatsapp"></i>
+              WhatsApp
+            </a>
           </div>
         </div>
 

@@ -71,9 +71,21 @@
   height: 0.2rem;
   width: 100%;
   background: #00eaff;
+  box-shadow: 0 0 0.5rem #00eaff;
+
+  animation: progress 3s linear forwards;
 }
 
 /* barra roja si error */
 .toast.error .toast-progress {
   background: #ff3b3b;
+}
+
+@keyframes progress {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
 }

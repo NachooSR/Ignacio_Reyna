@@ -58,7 +58,25 @@ modal.addEventListener("click", (e) => {
   }
 });
 
+///COPY EMAIL
+const btn_copy = document.getElementById("copyEmail");
+const email = document.getElementById("emailText").innerText;
+
+  btn_copy.addEventListener("click", () => {
+    navigator.clipboard.writeText(email);
+
+    btn_copy.innerHTML = '<i class="fas fa-check"></i>';
+    
+    setTimeout(() => {
+      btn_copy.innerHTML = '<i class="fas fa-copy"></i>';
+    }, 1500);
+  });
+
+(function () {
+  emailjs.init("FSWlwAo4Ngnioa5gp");})();
+
 function showToast(message, type = "success") {
+  
   const toast = document.getElementById("toast");
   const text = document.getElementById("toastText");
   const progress = toast.querySelector(".toast-progress");
