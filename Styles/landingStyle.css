@@ -1,65 +1,96 @@
 @import "/Styles/backAndNavStyle.css";
 
-
-
-.landing {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; 
-    text-align: center;
-    color: #fff;
-    margin-left: 1rem;
-    margin-right: 1rem;
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  position: relative;
 }
 
-.landing h1 {
-    font-size: 4rem;
-    margin: 0.5rem 0;
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 500px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(124,58,237,0.2), transparent);
+  filter: blur(80px);
+  z-index: -1;
 }
 
-.landing h2 {
-    font-size: 4rem;
-    
+.hero-content h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 700;
 }
 
-.landing h3 {
-    font-size: 2rem;
-    margin: 0.5rem 0;
+.hero h1 {
+  background: linear-gradient(90deg, #ffffff, #00d4ff, #ffffff);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s linear infinite;
 }
 
-.boton-Cv{
-    margin-top: 2rem;
-    padding: 0.6rem;
-    display: flex;
-    gap: 0.3rem;
-    text-decoration: none;
-    color: white;    
-    border: 2px solid #8c52ff;
-    border-radius: 4px;
-    transition: 0.3s;
+@keyframes shine {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 200%;
+  }
 }
 
-.boton-Cv p{
-    margin-top: 2px;
-    font-size: 1.1rem;
-    color: #8c52ff;
+.hero-content h2 {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  color: #cbd5f5;
+  margin-top: 10px;
 }
 
-.boton-Cv svg{
-    fill: #8c52ff;
+.subtitle {
+  margin-top: 15px;
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+  color: #94a3b8;
 }
 
-.boton-Cv:hover{
-    transform: scale(1.1);
-    background-color: #320a3d;
-    svg{
-        fill: white;
-    }
-    p{
-     color: white;
-    }
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
+.btn {
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
 
+.primary {
+  background: linear-gradient(135deg, #2563eb, #00d4ff);
+  color: white;
+}
+
+.primary:hover {
+  transform: scale(1.05);
+}
+
+.secondary {
+  border: 1px solid #2563eb;
+  color: #00d4ff;
+  background: transparent;
+}
+
+.secondary:hover {
+  background: rgba(37, 99, 235, 0.15);
+  transform: scale(1.05);
+}

@@ -1,28 +1,79 @@
-.footercito{
-    display: flex;
-    flex-direction: column;
-    color: white;
-    gap: 1rem;
-   padding-top: 2rem; 
-   padding: 1rem;
-    align-items: center;
-    background: linear-gradient(to right, #000000, #640080);}
-
-
-
-.iconsContact{
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
+.footer {
+  width: 100%;
+  padding: 1.2rem;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  text-align: center;
 }
 
-.iconsContact i{
-    font-size: 2rem;
-    transition: 0.3s ease;
+.footer p {
+  color: #aaa;
+  font-size: 0.9rem;
 }
 
-.iconsContact i:hover{
-    transform: scale(1.1);
-    color: white;
+.author {
+  color: #00eaff;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
+.author:hover {
+  color: white;
+  text-shadow: 0 0 8px #00eaff;
+}
+
+/* Alerta */
+
+.toast {
+  position: fixed;
+  top: 1.2rem;
+  right: 1.2rem;
+
+  background: rgba(15,15,30,0.9);
+  color: white;
+
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.5rem;
+
+  border-left: 0.25rem solid #00eaff;
+
+  box-shadow: 0 0 1rem rgba(0,234,255,0.3);
+
+  opacity: 0;
+  transform: translateY(-1rem);
+
+  transition: all 0.3s ease;
+
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* SUCCESS */
+.toast.success {
+  border-left-color: #00eaff;
+}
+
+/* ERROR */
+.toast.error {
+  border-left-color: #ff3b3b;
+  box-shadow: 0 0 1rem rgba(255,59,59,0.3);
+}
+
+.toast-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0.2rem;
+  width: 100%;
+  background: #00eaff;
+}
+
+/* barra roja si error */
+.toast.error .toast-progress {
+  background: #ff3b3b;
+}

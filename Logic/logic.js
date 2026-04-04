@@ -21,50 +21,92 @@ function hideSideBarAndRedirect(){
 }
 
 
-
-
-
-/////ZONA PROYECTOS
-const proyectos = document.querySelectorAll('.proyecto');
-
-let proyectoActual = 0;
-
-function mostrarProyecto(indice) {
-    proyectos.forEach((proyecto, i) => {
-        if (i === indice) {
-            proyecto.style.display = 'block';
-        } else {
-            proyecto.style.display = 'none';
-        }
+/// About me
+document.querySelectorAll('.achievement').forEach(el => {
+  el.addEventListener('click', e => {
+    e.stopPropagation();
+    document.querySelectorAll('.achievement').forEach(a => {
+      if (a !== el) a.classList.remove('active');
     });
-}
+    el.classList.toggle('active');
+  });
+});
 
-
-mostrarProyecto(proyectoActual);
-
-
-document.getElementById('nextBtn').addEventListener('click', function() {
-    proyectoActual = (proyectoActual + 1) % proyectos.length;
-    mostrarProyecto(proyectoActual);
+document.addEventListener('click', () => {
+  document.querySelectorAll('.achievement').forEach(a => {
+    a.classList.remove('active');
+  });
 });
 
 
-document.getElementById('backBtn').addEventListener('click', function() {
-    proyectoActual = (proyectoActual - 1 + proyectos.length) % proyectos.length;
-    mostrarProyecto(proyectoActual);
+/// Zona Skills
+const coffeeBtn = document.getElementById("coffeeBtn");
+const modal = document.getElementById("coffeeModal");
+const closeModal = document.getElementById("closeModal");
+
+coffeeBtn.addEventListener("click", () => {
+  modal.classList.add("active");
 });
 
+closeModal.addEventListener("click", () => {
+  modal.classList.remove("active");
+});
 
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.classList.remove("active");
+  }
+});
 
-///Copiar Mail
-function copiarPortapapeles( text) {
-  event.preventDefault(); 
-  navigator.clipboard.writeText(text)
+function showToast(message, type = "success") {
+  const toast = document.getElementById("toast");
+  const text = document.getElementById("toastText");
+  const progress = toast.querySelector(".toast-progress");
 
-  const icon=document.getElementById("checkmark");
-  icon.style.color="green";
-   
+  text.textContent = message;
+
+  toast.classList.remove("success", "error");
+  toast.classList.add(type, "show");
+
+  // reinicia animación
+  progress.style.animation = "none";
+  progress.offsetHeight;
+  progress.style.animation = "progress 3s linear forwards";
+
   setTimeout(() => {
-    icon.style.color = "";
-  }, 1000);
+    toast.classList.remove("show");
+  }, 3000);
 }
+
+const form = document.getElementById("contactForm");
+const btn = document.getElementById("submitBtn");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  btn.classList.add("loading");
+  btn.disabled = true;
+
+  const timeout = setTimeout(() => {
+    btn.classList.remove("loading");
+    btn.disabled = false;
+    showToast("El servicio tardó demasiado ⏳", "error");
+  }, 5000);
+
+  emailjs
+    .sendForm("service_portfolio", "template_0zbf6cg", this)
+    .then(() => {
+      clearTimeout(timeout);
+      showToast("Mensaje enviado 🚀", "success");
+      form.reset();
+    })
+    .catch((error) => {
+      clearTimeout(timeout);
+      showToast("Error al enviar ❌", "error");
+      console.log(error);
+    })
+    .finally(() => {
+      btn.classList.remove("loading");
+      btn.disabled = false;
+    });
+});

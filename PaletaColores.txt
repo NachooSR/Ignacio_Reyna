@@ -3,3 +3,8 @@ Nav-bar color   #640080
 Nav-bar hover   #9605be
 Detalles        #8c52ff
 Neon Divider    #ff00ff
+
+
+Nueva
+Azul #2563eb
+Cian #00d4ff

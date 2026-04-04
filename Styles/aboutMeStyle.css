@@ -1,119 +1,215 @@
-#sobreMi{
-   color: #8c52ff;
-   margin-top: 4rem;
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.5rem;
+  flex-wrap: wrap;
 }
 
-.contenedorInformacion{
-    display: flex;
-    gap: 2rem;
-    width: 60%;
-    flex-wrap: wrap;
+.about-text {
+  flex: 1;
+  min-width: 0;
+  max-width: 32rem;
+}
+
+.about-text h2 {
+  color: white;
+}
+
+.about-text span {
+  color: #00eaff;
+}
+
+.about-text p {
+  color: #bfc9d9;
+  word-wrap: break-word;
+}
+
+.achievements-card {
+  flex: 0 1 20rem;
+  max-width: 100%;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  background: linear-gradient(145deg, #0a0f2c, #11183f);
+  box-shadow: 0 0 1.5rem rgba(0,0,0,0.5);
+}
+
+.achievements-card h4 {
+  color: #aaa;
+  font-size: 0.75rem;
+  margin-bottom: 0.6rem;
+}
+
+.progress span {
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+.bar {
+  height: 0.35rem;
+  background: #222;
+  border-radius: 1rem;
+  margin: 0.3rem 0 0.7rem;
+}
+
+.fill {
+  width: 80%;
+  height: 100%;
+  background: #00eaff;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.6rem #00eaff;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(3.5rem, 4rem));
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.achievement {
+  position: relative;
+}
+
+.achievement.special img {
+  box-shadow:
+    0 0 0.3rem #ffd700,
+    0 0 0.6rem #ffd700,
+    0 0 1.2rem rgba(255, 215, 0, 0.8),
+    0 0 2rem rgba(255, 215, 0, 0.6);
+  border: 0.12rem solid #ffd700;
+}
+
+.achievement.special img:hover {
+  transform: scale(1.08);
+  box-shadow:
+    0 0 0.6rem #ffd700,
+    0 0 1.5rem #ffd700,
+    0 0 3rem rgba(255, 215, 0, 0.9);
+}
+
+.achievement img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.achievement img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 0.6rem #00eaff;
+}
+
+.locked img {
+  filter: grayscale(1);
+  opacity: 0.4;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: calc(100% + 0.6rem);
+  left: 50%;
+  transform: translateX(-50%) translateY(0.6rem);
+  width: min(13rem, 90vw);
+  background: rgba(10,15,44,0.95);
+  border-radius: 0.5rem;
+  opacity: 0;
+  transition: 0.25s;
+  pointer-events: none;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.5);
+}
+
+.achievement:hover .tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.achievement.active .tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+.tooltip-top {
+  display: flex;
+  gap: 0.6rem;
+  padding: 0.6rem;
+}
+
+.tooltip-top img {
+  width: 2rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 0.3rem;
+}
+
+.tooltip-top h4 {
+  color: white;
+  font-size: 0.8rem;
+}
+
+.tooltip-top p {
+  color: #bfc9d9;
+  font-size: 0.7rem;
+}
+
+.tooltip-bottom {
+  background: rgba(0,0,0,0.4);
+  padding: 0.4rem;
+  font-size: 0.7rem;
+  color: #aaa;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.achievement:nth-child(3n) .tooltip {
+  left: auto;
+  right: 0;
+  transform: translateY(0.6rem);
+}
+
+.achievement:nth-child(3n):hover .tooltip {
+  transform: translateY(0);
+}
+
+.achievement:nth-child(3n+1) .tooltip {
+  left: 0;
+  transform: translateY(0.6rem);
+}
+
+.achievement:nth-child(3n+1):hover .tooltip {
+  transform: translateY(0);
+}
+
+@media (max-width: 56rem) {
+  .about-section {
+    flex-direction: column;
     align-items: center;
-    margin: auto;
-}
-
-.descripcionPersonal{
-    display: flex;
-    gap: 1rem;
-    flex-direction: column;
-    color: white;
-    flex: 1;
-    margin-bottom: 2rem;
-    
-}
-
-
-.tituloUniversitario{
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    gap: 1rem;
-    flex:1;
-    color: grey;
-    margin-top: 5rem;
-    border: 1px solid #8c52ff;
-    background-color: #320a3d;
-    transition: 0.3s;
-    border-radius: 5px;
-}
-
-.tituloUniversitario:hover{
-    color: white;
-   
-}
-
-.formacion{
-    display: flex;
-    flex-direction: column;
-    gap:2rem;
-    width: 60%;
-    flex-wrap: wrap;
-    margin: auto;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
-    
-}
-
-.formacion h2{
-    color: #8c52ff;
-}
-
-.formacion-cursos{
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.detalleCurso{
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    gap:0.3rem;
-    flex:1;
-    color: grey;
-    border: 1px solid #8c52ff;
-    background-color: #320a3d;
-    transition: 0.3s;
-    border-radius: 5px;
-}
-
-.detalleCurso:hover{
-    color: white;
-    svg{
-        fill: white;
-    }
-}
-
-.boton-Certificado svg{
-     fill: #8c52ff;
-}
-
-/*******MEDIA QUERIES******/
-
-@media (max-width: 1000px) {
-    .contenedorInformacion {
-      flex-direction: column; 
-      align-items: center; 
-    }
-  
-    .descripcionPersonal, .tituloUniversitario {
-      width: 100%; 
-    }
-    .tituloUniversitario{
-        margin-top: 0;
-    }
-    
-}
-
-@media (max-width: 900px) {
-    .formacion-cursos {
-      flex-direction: column; 
-       align-items: center; 
-    }
-  
-    .detalleCurso {
-      width: 100%; 
-    }
+    text-align: center;
   }
+
+  .about-text {
+    margin: 0 1rem;
+  }
+
+  .achievements-card {
+    width: 100%;
+    max-width: 22rem;
+    
+  }
+
+  .achievements-grid {
+    grid-template-columns: repeat(3, 4rem);
+    justify-content: center;
+  }
+
+  .tooltip {
+    left: 0;
+    transform: translateY(0.6rem);
+  }
+
+  .achievement:hover .tooltip,
+  .achievement.active .tooltip {
+    transform: translateY(0);
+  }
+}
