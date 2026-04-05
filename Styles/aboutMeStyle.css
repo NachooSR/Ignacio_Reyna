@@ -71,7 +71,57 @@
   position: relative;
 }
 
+.achievement.special {
+  position: relative;
+  border-radius: 0.5rem;
+}
+
+.achievement.special::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 0.5rem;
+  pointer-events: none;
+
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255,215,0,0.9) 0%, transparent 40%),
+    radial-gradient(circle at 85% 25%, rgba(255,215,0,0.8) 0%, transparent 40%),
+    radial-gradient(circle at 20% 85%, rgba(255,215,0,0.8) 0%, transparent 40%),
+    radial-gradient(circle at 80% 80%, rgba(255,215,0,0.9) 0%, transparent 40%);
+
+  opacity: 0.6;
+  animation: sparkleMove 3s ease-in-out infinite;
+}
+@keyframes sparkleMove {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
 .achievement.special img {
+  border: 0.12rem solid #ffd700;
+  box-shadow:
+    0 0 0.4rem #ffd700,
+    0 0 1rem rgba(255, 215, 0, 0.7);
+}
+
+.achievement.special:hover::after {
+  animation-duration: 2.2s;
+  opacity: 1;
+}
+
+.achievement.special:hover img {
+  box-shadow:
+    0 0 0.8rem #ffd700,
+    0 0 2rem rgba(255, 215, 0, 1);
+}
+
+/* .achievement.special img {
   box-shadow:
     0 0 0.3rem #ffd700,
     0 0 0.6rem #ffd700,
@@ -86,7 +136,7 @@
     0 0 0.6rem #ffd700,
     0 0 1.5rem #ffd700,
     0 0 3rem rgba(255, 215, 0, 0.9);
-}
+} */
 
 .achievement img {
   width: 100%;

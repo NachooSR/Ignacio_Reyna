@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="./Styles/Skills-Zone.css" />
     <link rel="stylesheet" href="./Styles/footer.css" />
     <link rel="stylesheet" href="./Styles/contact.css" />
+    <link rel="stylesheet" href="./Styles/overlay.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -31,6 +32,16 @@
   </head>
 
   <body>
+
+    <!-- <div class="intro-overlay" id="intro">
+      <div class="intro-card">
+        <h2>Unlock the hidden achievements</h2>
+        <p>Explore my portfolio and discover secrets along the way.</p>
+
+        <button id="startBtn">Get Started</button>
+      </div>
+    </div> -->
+
     <header>
       <nav>
         <ul class="sideBar">
@@ -49,13 +60,13 @@
             ></a>
           </li>
           <li onclick="hideSideBarAndRedirect()">
-            <a href="#about-me">Sobre Mi</a>
+            <a href="#about-me">About me</a>
           </li>
           <li onclick="hideSideBarAndRedirect()">
-            <a href="#projects">Proyectos</a>
+            <a href="#projects">Projects</a>
           </li>
           <li onclick="hideSideBarAndRedirect()">
-            <a href="#skills">Habilidades</a>
+            <a href="#skills">Skills</a>
           </li>
           <li onclick="hideSideBarAndRedirect()">
             <a href="#contacto-zona">Contacto</a>
@@ -64,8 +75,8 @@
 
         <ul>
           <li><a href="#">Reyna Ignacio</a></li>
-          <li class="hideOnMobile"><a href="#about-me">Sobre Mi</a></li>
-          <li class="hideOnMobile"><a href="#projects">Proyectos</a></li>
+          <li class="hideOnMobile"><a href="#about-me">About me</a></li>
+          <li class="hideOnMobile"><a href="#projects">Projects</a></li>
           <li class="hideOnMobile">
             <a href="#skills">Habilidades</a>
           </li>
@@ -333,7 +344,11 @@
             <div class="project-footer">
               <span class="tech">Python · Django</span>
 
-              <a href="https://github.com/NachooSR/Flowly-app" target="_blank" class="repo-btn">
+              <a
+                href="https://github.com/NachooSR/Flowly-app"
+                target="_blank"
+                class="repo-btn"
+              >
                 <i class="fab fa-github"></i>
                 Repositorio
               </a>
@@ -351,7 +366,11 @@
             <div class="project-footer">
               <span class="tech">Angular · Typescript</span>
 
-              <a href="https://github.com/bmSgithub/tplab4" target="_blank" class="repo-btn">
+              <a
+                href="https://github.com/bmSgithub/tplab4"
+                target="_blank"
+                class="repo-btn"
+              >
                 <i class="fab fa-github"></i>
                 Repositorio
               </a>
@@ -369,7 +388,11 @@
             <div class="project-footer">
               <span class="tech">Java · OOP</span>
 
-              <a href="https://github.com/LadyCari/TpFinalLabIII" target="_blank" class="repo-btn">
+              <a
+                href="https://github.com/LadyCari/TpFinalLabIII"
+                target="_blank"
+                class="repo-btn"
+              >
                 <i class="fab fa-github"></i>
                 Repositorio
               </a>
@@ -407,17 +430,29 @@
           </div>
 
           <div class="socials">
-            <a href="https://github.com/NachooSR" target="_blank" class="social-link">
+            <a
+              href="https://github.com/NachooSR"
+              target="_blank"
+              class="social-link"
+            >
               <i class="fab fa-github"></i>
               GitHub
             </a>
 
-            <a href="https://www.linkedin.com/in/ignacio-nicolas-reyna-349834248/" target="_blank" class="social-link">
+            <a
+              href="https://www.linkedin.com/in/ignacio-nicolas-reyna-349834248/"
+              target="_blank"
+              class="social-link"
+            >
               <i class="fab fa-linkedin"></i>
               LinkedIn
             </a>
 
-            <a href="https://wa.me/5492236638642" target="_blank" class="social-link">
+            <a
+              href="https://wa.me/5492236638642"
+              target="_blank"
+              class="social-link"
+            >
               <i class="fab fa-whatsapp"></i>
               WhatsApp
             </a>

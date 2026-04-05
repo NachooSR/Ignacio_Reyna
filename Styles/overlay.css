@@ -1,0 +1,58 @@
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  background: #050816;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999999;
+}
+
+.intro-card {
+  text-align: center;
+  color: white;
+}
+
+.intro-card button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  font-size: 0.9rem;
+  color: white;
+  background: linear-gradient(90deg, #00eaff, #007bff);
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+  box-shadow: 0 0 0.5rem rgba(0,234,255,0.6);
+}
+
+.intro-card button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
+  );
+  transform: translateX(-100%);
+}
+
+
+.intro-card button:hover {
+  transform: translateY(-0.1rem) scale(1.05);
+  box-shadow: 0 0 1.5rem rgba(0,234,255,0.9);
+}
+
+.intro-card button {
+  animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0.5rem rgba(0,234,255,0.6); }
+  50% { box-shadow: 0 0 1.5rem rgba(0,234,255,1); }
+  100% { box-shadow: 0 0 0.5rem rgba(0,234,255,0.6); }
+}

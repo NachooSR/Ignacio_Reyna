@@ -1,4 +1,11 @@
-///NAVBAR
+const intro = document.getElementById("intro");
+const startBtn = document.getElementById("startBtn");
+
+startBtn.onclick = () => {
+  intro.style.display = "none";
+};
+
+
 
 function showSideBar(){
 
