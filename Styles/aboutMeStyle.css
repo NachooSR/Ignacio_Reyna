@@ -1,3 +1,5 @@
+/* ===================== ABOUT SECTION ===================== */
+
 .about-section {
   display: flex;
   align-items: center;
@@ -25,6 +27,9 @@
   word-wrap: break-word;
 }
 
+
+/* ===================== ACHIEVEMENTS CARD ===================== */
+
 .achievements-card {
   flex: 0 1 20rem;
   max-width: 100%;
@@ -39,6 +44,9 @@
   font-size: 0.75rem;
   margin-bottom: 0.6rem;
 }
+
+
+/* ===================== PROGRESS BAR ===================== */
 
 .progress span {
   font-size: 0.8rem;
@@ -60,6 +68,9 @@
   box-shadow: 0 0 0.6rem #00eaff;
 }
 
+
+/* ===================== ACHIEVEMENTS GRID ===================== */
+
 .achievements-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(3.5rem, 4rem));
@@ -69,7 +80,40 @@
 
 .achievement {
   position: relative;
+  transition: 0.3s;
 }
+
+.achievement img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.achievement img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 0.6rem #00eaff;
+}
+
+.achievement.new {
+  transform: scale(0.5);
+  opacity: 0;
+}
+
+.achievement.new.show {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.locked img {
+  filter: grayscale(1);
+  opacity: 0.4;
+}
+
+
+/* ===================== SPECIAL ACHIEVEMENT ===================== */
 
 .achievement.special {
   position: relative;
@@ -82,6 +126,7 @@
   inset: 0;
   border-radius: 0.5rem;
   pointer-events: none;
+  opacity: 0.6;
 
   background:
     radial-gradient(circle at 15% 20%, rgba(255,215,0,0.9) 0%, transparent 40%),
@@ -89,18 +134,7 @@
     radial-gradient(circle at 20% 85%, rgba(255,215,0,0.8) 0%, transparent 40%),
     radial-gradient(circle at 80% 80%, rgba(255,215,0,0.9) 0%, transparent 40%);
 
-  opacity: 0.6;
   animation: sparkleMove 3s ease-in-out infinite;
-}
-@keyframes sparkleMove {
-  0%, 100% {
-    opacity: 0.3;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.05);
-  }
 }
 
 .achievement.special img {
@@ -121,41 +155,22 @@
     0 0 2rem rgba(255, 215, 0, 1);
 }
 
-/* .achievement.special img {
-  box-shadow:
-    0 0 0.3rem #ffd700,
-    0 0 0.6rem #ffd700,
-    0 0 1.2rem rgba(255, 215, 0, 0.8),
-    0 0 2rem rgba(255, 215, 0, 0.6);
-  border: 0.12rem solid #ffd700;
+
+/* ===================== ANIMATIONS ===================== */
+
+@keyframes sparkleMove {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
 }
 
-.achievement.special img:hover {
-  transform: scale(1.08);
-  box-shadow:
-    0 0 0.6rem #ffd700,
-    0 0 1.5rem #ffd700,
-    0 0 3rem rgba(255, 215, 0, 0.9);
-} */
 
-.achievement img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 0.4rem;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.achievement img:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 0.6rem #00eaff;
-}
-
-.locked img {
-  filter: grayscale(1);
-  opacity: 0.4;
-}
+/* ===================== TOOLTIP ===================== */
 
 .tooltip {
   position: absolute;
@@ -189,8 +204,11 @@
 }
 
 .tooltip-top img {
-  width: 2rem;
-  aspect-ratio: 1 / 1;
+  width: 2.2rem;
+  height: 2.2rem;
+  object-fit: contain;
+  background: rgba(255,255,255,0.05);
+  padding: 0.2rem;
   border-radius: 0.3rem;
 }
 
@@ -212,6 +230,9 @@
   border-radius: 0 0 0.5rem 0.5rem;
 }
 
+
+/* ===================== TOOLTIP POSITION FIX ===================== */
+
 .achievement:nth-child(3n) .tooltip {
   left: auto;
   right: 0;
@@ -231,7 +252,143 @@
   transform: translateY(0);
 }
 
+
+/* ===================== HIDDEN ACHIEVEMENTS ===================== */
+
+.hidden-achievements {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.hidden-achievements p {
+  color: #888;
+  font-size: 0.75rem;
+  margin-bottom: 0.4rem;
+}
+
+.hidden-grid {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.hidden-box {
+  width: 3.5rem;
+  aspect-ratio: 1;
+  background: rgba(255,255,255,0.05);
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  font-size: 1.2rem;
+  border: 0.1rem dashed #444;
+}
+
+
+/* ===================== ACHIEVEMENT TOAST ===================== */
+
+.achievement-toast {
+  position: fixed;
+  bottom: 1.2rem;
+  right: 1.2rem;
+
+  max-width: min(90vw, 22rem);
+  width: fit-content;
+  box-sizing: border-box;
+
+  background: linear-gradient(145deg, #0b0f2a, #11183f);
+  border-left: 0.3rem solid gold;
+
+  padding: 0.9rem 1.1rem;
+  border-radius: 0.7rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  opacity: 0;
+  transform: translateY(1rem) scale(0.95);
+  transition: 0.3s ease;
+
+  box-shadow: 0 0 1rem rgba(255,215,0,0.4);
+  z-index: 99999;
+}
+
+.achievement-toast.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  box-shadow:
+    0 0 0.6rem rgba(255,215,0,0.6),
+    0 0 1.2rem rgba(255,215,0,0.4);
+}
+
+.achievement-toast img {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 0.4rem;
+  object-fit: cover;
+}
+
+.toast-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.toast-label {
+  font-size: 0.7rem;
+  color: #aaa;
+}
+
+.toast-title {
+  font-size: 0.9rem;
+  color: white;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+
+/* ===================== COMPLETION BANNER ===================== */
+
+.completion-banner {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(1rem);
+
+  background: linear-gradient(145deg, #0b0f2a, #11183f);
+  border: 0.1rem solid #00eaff;
+
+  padding: 1rem 1.5rem;
+  border-radius: 0.7rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  opacity: 0;
+  transition: 0.4s;
+
+  box-shadow: 0 0 1.5rem rgba(0,234,255,0.6);
+  z-index: 99999;
+}
+
+.completion-banner.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.completion-banner span {
+  color: white;
+  font-weight: 600;
+}
+
+
+/* ===================== RESPONSIVE ===================== */
+
 @media (max-width: 56rem) {
+
   .about-section {
     flex-direction: column;
     align-items: center;
@@ -245,7 +402,6 @@
   .achievements-card {
     width: 100%;
     max-width: 22rem;
-    
   }
 
   .achievements-grid {
@@ -261,5 +417,15 @@
   .achievement:hover .tooltip,
   .achievement.active .tooltip {
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .achievement-toast {
+    left: 0.6rem;
+    right: 0.6rem;
+    bottom: 1rem;
+    width: auto;
+    max-width: none;
   }
 }

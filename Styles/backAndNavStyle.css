@@ -1,3 +1,4 @@
+/* ===================== RESET ===================== */
 
 * {
     margin: 0;
@@ -5,17 +6,17 @@
     box-sizing: border-box;
 }
 
+
+/* ===================== BODY ===================== */
+
 body {
-     background: linear-gradient(to bottom, #141427, #0f0f1a);
-  
+    background: linear-gradient(to bottom, #141427, #0f0f1a);
     min-height: 100vh;
     font-family: "Roboto", sans-serif;
 }
 
 
-
-
-/*------------- navbar -------------*/
+/* ===================== NAVBAR ===================== */
 
 nav {
     position: fixed;
@@ -33,7 +34,6 @@ nav {
     border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-
 nav ul {
     width: 100%;
     max-width: 1200px;
@@ -44,11 +44,9 @@ nav ul {
     padding: 10px 20px;
 }
 
-
 nav ul li:first-child {
     margin-right: auto;
 }
-
 
 nav a {
     text-decoration: none;
@@ -58,12 +56,10 @@ nav a {
     transition: all 0.25s ease;
 }
 
-
 nav a:hover {
     background: rgba(59, 130, 246, 0.15);
     color: #00d4ff;
 }
-
 
 nav a.active {
     background: rgba(59, 130, 246, 0.2);
@@ -71,7 +67,9 @@ nav a.active {
     font-weight: 500;
 }
 
-/* linea divisoria */
+
+/* ===================== SECTION DIVIDER ===================== */
+
 .section-divider {
     height: 4px;
     margin: 20px 0;
@@ -85,7 +83,7 @@ nav a.active {
 }
 
 
-/*************** sidebar **************/
+/* ===================== SIDEBAR ===================== */
 
 .sideBar {
     position: fixed;
@@ -100,6 +98,7 @@ nav a.active {
     backdrop-filter: blur(15px);
 
     box-shadow: -10px 0 30px rgba(0,0,0,0.3);
+
     display: none;
     flex-direction: column;
     padding-top: 20px;
@@ -114,7 +113,9 @@ nav a.active {
     width: 100%;
 }
 
-/* button menu */
+
+/* ===================== MENU BUTTON ===================== */
+
 .menuBoton {
     display: none;
 }
@@ -124,7 +125,7 @@ nav a.active {
 }
 
 
-/*************** Media queries **************/
+/* ===================== RESPONSIVE ===================== */
 
 @media (max-width: 800px) {
 
@@ -142,6 +143,7 @@ nav a.active {
 }
 
 @media (max-width: 400px) {
+
     .sideBar {
         width: 100%;
     }

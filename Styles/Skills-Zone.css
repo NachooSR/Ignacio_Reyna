@@ -1,3 +1,5 @@
+/* ===================== SKILLS SECTION ===================== */
+
 .skills-section {
   padding: 4rem 2rem;
   text-align: center;
@@ -15,6 +17,9 @@
   font-size: clamp(1.8rem, 2.5vw, 2.5rem);
   color: white;
 }
+
+
+/* ===================== SKILLS GRID ===================== */
 
 .skills-grid {
   display: grid;
@@ -47,19 +52,27 @@
   box-shadow: 0 0 1.2rem rgba(0, 183, 255, 0.6);
 }
 
+
+/* ===================== MARIO BLOCK ===================== */
+
 .mario-block {
   width: 2.2rem;
   height: 2.2rem;
+
   background: #facc15;
   color: #1a1a1a;
   font-weight: bold;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   border-radius: 0.4rem;
   cursor: pointer;
+
   box-shadow: 0 0.2rem 0 #ca8a04;
   position: relative;
+
   animation: bounce 1.5s infinite;
 }
 
@@ -80,6 +93,9 @@
   animation: pop 0.5s ease;
 }
 
+
+/* ===================== ANIMATIONS ===================== */
+
 @keyframes bounce {
   0% { transform: translateY(0); }
   50% { transform: translateY(-0.3rem); }
@@ -91,16 +107,24 @@
   to { opacity: 1; transform: translateY(-1rem); }
 }
 
+
+/* ===================== COFFEE MODAL ===================== */
+
 .coffee-modal {
   position: fixed;
   inset: 0;
+
   background: rgba(0,0,0,0.8);
+
   z-index: 99999;
+
   display: none;
   align-items: center;
   justify-content: center;
+
   opacity: 0;
   pointer-events: none;
+
   transition: 0.3s;
 }
 
@@ -110,15 +134,22 @@
   pointer-events: all;
 }
 
+
+/* ===================== COFFEE CARD ===================== */
+
 .coffee-card {
   background: #0b0f2a;
   padding: 2rem;
   border-radius: 1.2rem;
+
   width: min(90%, 40rem);
   max-height: 90vh;
   overflow-y: auto;
+
   color: white;
+
   position: relative;
+
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -140,9 +171,13 @@
   max-height: 60vh;
   object-fit: contain;
   border-radius: 0.8rem;
-  z-index: 1;
+
   position: relative;
+  z-index: 1;
 }
+
+
+/* ===================== GALLERY ===================== */
 
 .coffee-gallery {
   display: flex;
@@ -172,11 +207,16 @@
   transform: scale(1.05);
 }
 
+
+/* ===================== CLOSE BUTTON ===================== */
+
 .close-modal {
   position: sticky;
   top: 0;
   align-self: flex-end;
+
   font-size: 1.5rem;
   cursor: pointer;
-   z-index: 999;
+
+  z-index: 999;
 }

@@ -1,4 +1,9 @@
+/* ===================== IMPORT ===================== */
+
 @import "/Styles/backAndNavStyle.css";
+
+
+/* ===================== HERO SECTION ===================== */
 
 .hero {
   min-height: 100vh;
@@ -25,6 +30,9 @@
   z-index: -1;
 }
 
+
+/* ===================== HERO TEXT ===================== */
+
 .hero-content h1 {
   font-size: clamp(2rem, 6vw, 3.5rem);
   font-weight: 700;
@@ -38,15 +46,6 @@
   animation: shine 3s linear infinite;
 }
 
-@keyframes shine {
-  from {
-    background-position: 0%;
-  }
-  to {
-    background-position: 200%;
-  }
-}
-
 .hero-content h2 {
   font-size: clamp(1.1rem, 3vw, 1.5rem);
   color: #cbd5f5;
@@ -58,6 +57,9 @@
   font-size: clamp(0.95rem, 2.5vw, 1.1rem);
   color: #94a3b8;
 }
+
+
+/* ===================== HERO BUTTONS ===================== */
 
 .buttons {
   margin-top: 30px;
@@ -93,4 +95,16 @@
 .secondary:hover {
   background: rgba(37, 99, 235, 0.15);
   transform: scale(1.05);
+}
+
+
+/* ===================== ANIMATIONS ===================== */
+
+@keyframes shine {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 200%;
+  }
 }

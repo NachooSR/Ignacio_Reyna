@@ -1,3 +1,5 @@
+/* ===================== CONTACT SECTION ===================== */
+
 .contact-section {
   padding: 4rem 2rem;
 }
@@ -12,6 +14,7 @@
 }
 
 
+/* ===================== CONTACT INFO ===================== */
 
 .contact-info {
   flex: 1;
@@ -49,6 +52,9 @@
   font-size: 0.9rem;
 }
 
+
+/* ===================== SOCIALS ===================== */
+
 .socials {
   margin-top: 2rem;
   display: flex;
@@ -65,7 +71,25 @@
   color: #00eaff;
 }
 
-/* FORM */
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  color: #888;
+  transition: 0.2s;
+}
+
+.social-link i {
+  font-size: 0.9rem;
+}
+
+.social-link:hover {
+  color: #00eaff;
+}
+
+
+/* ===================== CONTACT FORM ===================== */
 
 .contact-form {
   flex: 1;
@@ -97,6 +121,9 @@
   box-shadow: 0 0 0.5rem #00eaff;
 }
 
+
+/* ===================== BUTTON ===================== */
+
 .btn-contact {
   width: fit-content;
   padding: 0.7rem 1.5rem;
@@ -117,7 +144,22 @@
   box-shadow: 0 0 0.6rem #00eaff;
 }
 
-/* spinner */
+.btn-contact.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.btn-contact.loading .spinner {
+  display: block;
+}
+
+.btn-contact.loading .btn-text {
+  opacity: 0.7;
+}
+
+
+/* ===================== SPINNER ===================== */
+
 .spinner {
   width: 1rem;
   height: 1rem;
@@ -134,19 +176,8 @@
   }
 }
 
-/* estado loading */
-.btn-contact.loading {
-  opacity: 0.7;
-  cursor: not-allowed;
-}
 
-.btn-contact.loading .spinner {
-  display: block;
-}
-
-.btn-contact.loading .btn-text {
-  opacity: 0.7;
-}
+/* ===================== MAIL ROW ===================== */
 
 .mail-row {
   display: flex;
@@ -171,27 +202,11 @@
   box-shadow: 0 0 0.4rem #00eaff;
 }
 
-.social-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  text-decoration: none;
-  color: #888;
-  transition: 0.2s;
-}
 
-.social-link i {
-  font-size: 0.9rem;
-}
-
-.social-link:hover {
-  color: #00eaff;
-}
-
-
-/* RESPONSIVE */
+/* ===================== RESPONSIVE ===================== */
 
 @media (max-width: 768px) {
+
   .contact-container {
     flex-direction: column;
     text-align: center;

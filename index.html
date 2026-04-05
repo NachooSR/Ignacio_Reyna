@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ignacio Reyna</title>
+
+    <!-- FAVICON -->
     <link
       rel="icon"
       href="/Images/Logo.png"
@@ -11,12 +13,15 @@
       type="image/x-icon"
     />
 
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- STYLES -->
     <link rel="stylesheet" href="./Styles/backAndNavStyle.css" />
     <link rel="stylesheet" href="./Styles/landingStyle.css" />
     <link rel="stylesheet" href="./Styles/aboutMeStyle.css" />
@@ -24,26 +29,32 @@
     <link rel="stylesheet" href="./Styles/Skills-Zone.css" />
     <link rel="stylesheet" href="./Styles/footer.css" />
     <link rel="stylesheet" href="./Styles/contact.css" />
-    <link rel="stylesheet" href="./Styles/overlay.css">
+    <link rel="stylesheet" href="./Styles/overlay.css" />
+    
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
   </head>
 
   <body>
 
-    <!-- <div class="intro-overlay" id="intro">
+    <!-- ===================== INTRO OVERLAY ===================== -->
+    <div class="intro-overlay" id="intro">
       <div class="intro-card">
         <h2>Unlock the hidden achievements</h2>
         <p>Explore my portfolio and discover secrets along the way.</p>
 
         <button id="startBtn">Get Started</button>
       </div>
-    </div> -->
+    </div>
 
+
+    <!-- ===================== NAVBAR ===================== -->
     <header>
       <nav>
+
+        <!-- SIDEBAR MOBILE -->
         <ul class="sideBar">
           <li onclick="hideSideBar()">
             <a href=""
@@ -69,18 +80,19 @@
             <a href="#skills">Skills</a>
           </li>
           <li onclick="hideSideBarAndRedirect()">
-            <a href="#contacto-zona">Contacto</a>
+            <a href="#contacto-zona">Contact</a>
           </li>
         </ul>
 
+        <!-- NAV LINKS -->
         <ul>
           <li><a href="#">Reyna Ignacio</a></li>
           <li class="hideOnMobile"><a href="#about-me">About me</a></li>
           <li class="hideOnMobile"><a href="#projects">Projects</a></li>
           <li class="hideOnMobile">
-            <a href="#skills">Habilidades</a>
+            <a href="#skills">Skills</a>
           </li>
-          <li class="hideOnMobile"><a href="#contacto-zona">Contacto</a></li>
+          <li class="hideOnMobile"><a href="#contacto-zona">Contact</a></li>
           <li class="menuBoton" onclick="showSideBar()">
             <a href="#"
               ><svg
@@ -99,6 +111,7 @@
       </nav>
     </header>
 
+    <!-- ===================== HERO ===================== -->
     <main>
       <section class="hero">
         <div class="hero-content">
@@ -109,7 +122,9 @@
           <p class="subtitle">Building backend applications with Python</p>
 
           <div class="buttons">
-            <a href="#projects" class="btn primary">View Projects</a>
+            <a href="#projects" class="btn primary" id="viewProjectsBtn"
+              >View Projects</a
+            >
             <a
               href="/Documents/Ignacio-Reyna-CV.pdf"
               class="btn secondary"
@@ -121,32 +136,38 @@
       </section>
     </main>
 
-    <div class="section-divider" id="about-me"></div>
 
+    <div class="section-divider" id="about-me"></div>
+    
+    <!-- ===================== ABOUT ME ===================== -->
     <div class="about-section">
       <div class="about-text">
-        <h2>Sobre <span>mí</span></h2>
+        <h2>About <span>me</span></h2>
         <p>
-          Técnico en Programación enfocado en backend, con experiencia en
-          desarrollo de APIs y proyectos personales. Actualmente profundizando
-          en Python y análisis de datos, aplicando herramientas como Pandas para
-          la exploración y transformación de información. Interesado en seguir
-          construyendo soluciones reales mientras avanzo hacia una
-          especialización en ciberseguridad.
+          Programming Technician focused on backend development, with experience
+          building APIs and personal projects. Currently expanding my skills in
+          Python and data analysis, using tools like Pandas for data exploration
+          and transformation. Passionate about developing real-world solutions
+          while progressing toward a specialization in cybersecurity.
         </p>
       </div>
 
+    <!-- ACHIEVEMENTS -->
       <div class="achievements-card">
-        <h4>LOGROS</h4>
+        <h4>Achievements</h4>
 
+        <!-- PROGRESS -->
         <div class="progress">
-          <span>Logros desbloqueados: 4/5 (80%)</span>
+          <span>Unlocked Achievements: 5/8 (65%)</span>
           <div class="bar">
             <div class="fill"></div>
           </div>
         </div>
 
+         <!-- GRID -->
         <div class="achievements-grid">
+
+          <!-- ACHIEVEMENT ITEMS -->
           <div class="achievement special">
             <img src="./Images/UTN_logo.jpg" />
 
@@ -154,13 +175,13 @@
               <div class="tooltip-top">
                 <img src="./Images/UTN_logo.jpg" />
                 <div>
-                  <h4>Técnico en Programación</h4>
+                  <h4>Programming Technician</h4>
                   <p>UTN - Mar del Plata</p>
                 </div>
               </div>
 
               <div class="tooltip-bottom">
-                <p>Desbloqueado 3 oct 2024</p>
+                <p>Unlocked Oct 3, 2024</p>
               </div>
             </div>
           </div>
@@ -173,17 +194,17 @@
                 <img src="./Images/images.png" />
                 <div>
                   <h4>Python Developer</h4>
-                  <p>Finalicé el curso de Coderhouse</p>
+                  <p>Completed the Coderhouse course</p>
                 </div>
               </div>
 
               <div class="tooltip-bottom">
-                <p>Desbloqueado 19 mar 2026</p>
+                <p>Unlocked Mar 19, 2026</p>
               </div>
             </div>
           </div>
 
-          <div class="achievement locked">
+          <div class="achievement">
             <img src="./Images/ambox.png" />
 
             <div class="tooltip">
@@ -191,12 +212,12 @@
                 <img src="./Images/ambox.png" />
                 <div>
                   <h4>Data Analyst</h4>
-                  <p>Completa el curso de Ambox</p>
+                  <p>Completed the Ambox course</p>
                 </div>
               </div>
 
               <div class="tooltip-bottom">
-                <p>En progreso</p>
+                <p>In Progress</p>
               </div>
             </div>
           </div>
@@ -209,12 +230,12 @@
                 <img src="./Images/labora.png" />
                 <div>
                   <h4>Go Developer</h4>
-                  <p>Finaliza bootcamp de Labora</p>
+                  <p>Completed the Labora bootcamp</p>
                 </div>
               </div>
 
               <div class="tooltip-bottom">
-                <p>Desbloqueado 13 may 2024</p>
+                <p>Unlocked May 13, 2024</p>
               </div>
             </div>
           </div>
@@ -226,20 +247,40 @@
               <div class="tooltip-top">
                 <img src="./Images/utnfr.png" />
                 <div>
-                  <h4>Desarrollador de juegos</h4>
-                  <p>Desarrolla tu juego con Unity</p>
+                  <h4>Game Developer</h4>
+                  <p>Built a game with Unity</p>
                 </div>
               </div>
 
               <div class="tooltip-bottom">
-                <p>Desbloqueado 21 jun 2022</p>
+                <p>Unlocked Jun 21, 2022</p>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- HIDDEN -->
+        <div class="hidden-achievements" id="hiddenSection">
+          <p class="hidden-title">Hidden Achievements</p>
+
+          <div class="achievements-grid hidden-row">
+            <div class="achievement locked" id="hidden-latte">
+              <div class="hidden-box">?</div>
+            </div>
+
+            <div class="achievement locked" id="hidden-mail">
+              <div class="hidden-box">?</div>
+            </div>
+
+            <div class="achievement locked" id="hidden-projects">
+              <div class="hidden-box">?</div>
             </div>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- ===================== SKILLS ===================== -->
     <section class="skills-section" id="skills">
       <div class="skills-header">
         <h2 class="skills-title">Skills</h2>
@@ -248,6 +289,7 @@
       </div>
 
       <div class="skills-grid">
+        <!-- SKILL CARDS -->
         <div class="skill-card">
           <img
             src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
@@ -299,6 +341,7 @@
       </div>
     </section>
 
+    <!-- ===================== COFFEE MODAL ===================== -->
     <div class="coffee-modal" id="coffeeModal">
       <div class="coffee-card">
         <span class="close-modal" id="closeModal">&times;</span>
@@ -306,10 +349,11 @@
         <h3 class="coffee-title">My life as a barista☕</h3>
 
         <p class="coffee-description">
-          Mientras me formo como desarrollador, trabajo en un café hace más de 4
-          años. Comencé como mozo, luego pasé por cocina, caja y comandas.
-          Actualmente me desempeño como barista, lo que me permitió adaptarme a
-          distintos roles y responsabilidades.
+          While developing my career as a developer, I have been working in a
+          coffe shop for over 4 years. I started as a waiter, then moved through
+          roles in the kitchen, cashier, and order management. I currently work
+          as a barista, which has allowed me to adapt to different roles and
+          responsibilities.
         </p>
 
         <video controls>
@@ -320,6 +364,7 @@
           <h4 class="gallery-title">My works</h4>
 
           <div class="gallery-grid">
+            <!-- IMAGES -->
             <img src="./Images/arte-latte/foto1.png" />
             <img src="./Images/arte-latte/foto2.png" />
             <img src="./Images/arte-latte/foto3.png" />
@@ -330,16 +375,18 @@
       </div>
     </div>
 
+    <!-- ===================== PROJECTS ===================== -->
     <section class="projects-section" id="projects">
       <h2 class="projects-title">Projects</h2>
 
       <div class="projects-grid">
+        <!-- PROJECT CARDS -->
         <div class="project-card">
           <img src="./Images/django-project.png" />
 
           <div class="project-info">
-            <h3>Flowly (En desarrollo)</h3>
-            <p>App de finanzas personales en evolución.</p>
+            <h3>Flowly (In Development)</h3>
+            <p>Personal finance app in progress.</p>
 
             <div class="project-footer">
               <span class="tech">Python · Django</span>
@@ -350,7 +397,7 @@
                 class="repo-btn"
               >
                 <i class="fab fa-github"></i>
-                Repositorio
+                Repo
               </a>
             </div>
           </div>
@@ -361,7 +408,7 @@
 
           <div class="project-info">
             <h3>Gym API</h3>
-            <p>Gestión de rutinas con API de ejercicios.</p>
+            <p>Workout management using an exercise API.</p>
 
             <div class="project-footer">
               <span class="tech">Angular · Typescript</span>
@@ -372,7 +419,7 @@
                 class="repo-btn"
               >
                 <i class="fab fa-github"></i>
-                Repositorio
+                Repo
               </a>
             </div>
           </div>
@@ -383,7 +430,7 @@
 
           <div class="project-info">
             <h3>Java Academy</h3>
-            <p>Simulación de facultad para aprender Java.</p>
+            <p>University simulation project to learn Java.</p>
 
             <div class="project-footer">
               <span class="tech">Java · OOP</span>
@@ -394,7 +441,7 @@
                 class="repo-btn"
               >
                 <i class="fab fa-github"></i>
-                Repositorio
+                Repo
               </a>
             </div>
           </div>
@@ -402,6 +449,7 @@
       </div>
     </section>
 
+    <!-- ===================== CONTACT ===================== -->
     <section class="contact-section" id="contacto-zona">
       <div class="contact-container">
         <div class="contact-info">
@@ -459,6 +507,7 @@
           </div>
         </div>
 
+        <!-- FORM -->
         <form class="contact-form" id="contactForm">
           <input type="text" name="name" placeholder="Name" required />
           <input type="email" name="email" placeholder="Email" required />
@@ -472,11 +521,15 @@
       </div>
     </section>
 
+    <!-- ===================== TOASTS ===================== -->
     <div id="toast" class="toast">
       <span id="toastText"></span>
       <div class="toast-progress"></div>
     </div>
+    <div id="achievementToast" class="achievement-toast"></div>
+    <div id="completionBanner" class="completion-banner"></div>
 
+    <!-- ===================== FOOTER ===================== -->
     <footer class="footer">
       <p>
         © 2026 Made by
@@ -484,11 +537,14 @@
       </p>
     </footer>
 
+    <!-- ===================== SCRIPTS ===================== -->
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="/Logic/logic.js"></script>
     <script
       src="https://kit.fontawesome.com/01888e8643.js"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
+    <script src="/Logic/logic_achievements.js"></script>
+
+
   </body>
 </html>
