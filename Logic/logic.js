@@ -1,9 +1,9 @@
-const intro = document.getElementById("intro");
-const startBtn = document.getElementById("startBtn");
+// const intro = document.getElementById("intro");
+// const startBtn = document.getElementById("startBtn");
 
-startBtn.onclick = () => {
-  intro.style.display = "none";
-};
+// startBtn.onclick = () => {
+//   intro.style.display = "none";
+// };
 
 
 
@@ -78,6 +78,12 @@ const email = document.getElementById("emailText").innerText;
       btn_copy.innerHTML = '<i class="fas fa-copy"></i>';
     }, 1500);
   });
+
+
+
+/*
+******************FUNCIONES PARA ENVIAR
+*/
 
 (function () {
   emailjs.init("FSWlwAo4Ngnioa5gp");})();
