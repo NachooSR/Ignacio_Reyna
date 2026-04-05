@@ -2,6 +2,7 @@
 
 const TOTAL_ACHIEVEMENTS = 8;
 let unlockedCount = 5;
+const TOAST_DURATION = 3000;
 
 
 /* ===================== MAIN LOGIC ===================== */
@@ -10,6 +11,8 @@ function unlockAchievement(key, title, imgSrc, description = "") {
   const hidden = document.getElementById("hidden-" + key);
   if (!hidden) return;
 
+  const isLast = unlockedCount + 1 === TOTAL_ACHIEVEMENTS;
+
   moveToUnlocked(title, imgSrc, description);
   hidden.remove();
 
@@ -17,6 +20,12 @@ function unlockAchievement(key, title, imgSrc, description = "") {
   updateProgress();
 
   showAchievementToast(title, imgSrc);
+
+  if (isLast) {
+    setTimeout(() => {
+      showCompletionBanner();
+    }, TOAST_DURATION + 300);
+  }
 }
 
 
@@ -71,7 +80,6 @@ function updateProgress() {
 
   if (unlockedCount === TOTAL_ACHIEVEMENTS) {
     if (hiddenSection) hiddenSection.remove();
-    showCompletionBanner();
   }
 }
 
@@ -94,7 +102,7 @@ function showAchievementToast(title, img) {
 
   setTimeout(() => {
     toast.classList.remove("show");
-  }, 3000);
+  }, TOAST_DURATION);
 }
 
 
