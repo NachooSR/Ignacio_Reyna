@@ -62,6 +62,14 @@ function moveToUnlocked(title, imgSrc, description = "") {
     </div>
   `;
 
+  newAchievement.addEventListener("click", (e) => {
+    e.stopPropagation();
+    document.querySelectorAll(".achievement").forEach(a => {
+      if (a !== newAchievement) a.classList.remove("active");
+    });
+    newAchievement.classList.toggle("active");
+  });
+
   grid.appendChild(newAchievement);
 }
 
@@ -130,6 +138,12 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     });
   }
+});
+
+document.addEventListener("click", () => {
+  document.querySelectorAll(".achievement").forEach(a => {
+    a.classList.remove("active");
+  });
 });
 
 
