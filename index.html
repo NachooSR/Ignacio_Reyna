@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="./Styles/backAndNavStyle.css" />
     <link rel="stylesheet" href="./Styles/landingStyle.css" />
     <link rel="stylesheet" href="./Styles/aboutMeStyle.css" />
+    <link rel="stylesheet" href="./Styles/experienceStyle.css" />
     <link rel="stylesheet" href="./Styles/proyectsZone.css" />
     <link rel="stylesheet" href="./Styles/Skills-Zone.css" />
     <link rel="stylesheet" href="./Styles/footer.css" />
@@ -80,6 +81,9 @@
             <a href="#skills">Skills</a>
           </li>
           <li onclick="hideSideBarAndRedirect()">
+            <a href="#experience">Experience</a>
+          </li>
+          <li onclick="hideSideBarAndRedirect()">
             <a href="#contacto-zona">Contact</a>
           </li>
         </ul>
@@ -92,6 +96,7 @@
           <li class="hideOnMobile">
             <a href="#skills">Skills</a>
           </li>
+          <li class="hideOnMobile"><a href="#experience">Experience</a></li>
           <li class="hideOnMobile"><a href="#contacto-zona">Contact</a></li>
           <li class="menuBoton" onclick="showSideBar()">
             <a href="#"
@@ -217,7 +222,7 @@
               </div>
 
               <div class="tooltip-bottom">
-                <p>In Progress</p>
+                <p>Unlocked May 10, 2026</p>
               </div>
             </div>
           </div>
@@ -374,6 +379,59 @@
         </div>
       </div>
     </div>
+
+
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section class="experience-preview" id="experience">
+      <div class="experience-preview-header">
+        <div>
+          <p class="section-label">Professional Experience</p>
+          <h2>Backend Developer <span>&amp; Technical Lead</span></h2>
+          <p class="experience-company">ID for Ideas &middot; April - May 2026</p>
+        </div>
+
+        <p class="experience-description">
+          Backend development and technical coordination in a collaborative
+          team, delivering CRM features through Scrum and weekly releases.
+        </p>
+      </div>
+
+      <div class="experience-preview-grid">
+        <article class="experience-preview-card">
+          <i class="fa-solid fa-code"></i>
+          <div>
+            <h3>Node.js Backend</h3>
+            <p>Endpoint development, validation and JWT authentication.</p>
+          </div>
+        </article>
+
+        <article class="experience-preview-card">
+          <i class="fa-solid fa-code-branch"></i>
+          <div>
+            <h3>Git &amp; Scrum</h3>
+            <p>Branch workflow, pull requests and sprint ceremonies.</p>
+          </div>
+        </article>
+
+        <article class="experience-preview-card">
+          <i class="fa-solid fa-people-group"></i>
+          <div>
+            <h3>Technical Leadership</h3>
+            <p>Code review and frontend/backend coordination.</p>
+          </div>
+        </article>
+      </div>
+
+      <a
+        class="document-btn primary-document experience-letter-link"
+        href="./Documents/Carta%20de%20recomendacion%20(2).pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <i class="fa-regular fa-file-pdf"></i>
+        View recommendation letter
+      </a>
+    </section>
 
     <!-- ===================== PROJECTS ===================== -->
     <section class="projects-section" id="projects">
